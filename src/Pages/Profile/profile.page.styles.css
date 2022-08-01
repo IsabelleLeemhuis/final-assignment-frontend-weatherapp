@@ -1,0 +1,12 @@
+.profile-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 50px 15px 50px;
+    margin: 15px;
+}
+
+h5 {
+    font-style: italic;
+}

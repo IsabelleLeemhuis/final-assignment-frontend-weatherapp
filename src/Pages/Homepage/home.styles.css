@@ -1,0 +1,25 @@
+.quote {
+    color: hsla(193, 83%, 20%, 1);
+    font-size: 20px;
+    font-style: italic;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.searchbar {
+    height: 50px;
+    margin: 50px;
+}
+
+.search-style {
+    height: 50px;
+    width: 175px;
+    text-align: center;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 25px;
+}

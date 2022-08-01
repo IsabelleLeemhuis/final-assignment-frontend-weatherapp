@@ -1,0 +1,12 @@
+.outer-container {
+    margin: 75px;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 80px 0 0 0;
+}

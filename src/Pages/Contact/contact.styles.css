@@ -1,0 +1,22 @@
+.comments {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 10px 50px 5px 50px;
+    margin: 50px;
+}
+
+.referrer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.contact-button {
+    cursor: pointer;
+}
