@@ -1,0 +1,11 @@
+.footer-outer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    background-color: hsla(200, 87%, 74%, 1);
+}

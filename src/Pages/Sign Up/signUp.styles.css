@@ -1,8 +1,17 @@
+.sign-up-container {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
 .intro-signup {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-grow: 0;
     flex-shrink: 1;
-    padding: 75px;
+    padding: 50px;
+    font-style: italic;
 }

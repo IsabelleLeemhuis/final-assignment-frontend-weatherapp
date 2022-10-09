@@ -17,13 +17,15 @@
     margin-left: 50px;
 }
 
-.nav-links-container {
+.ul {
     width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-right: 50px;
+    flex-shrink: 1;
+    flex-grow: 0;
 }
 
 .nav-link {

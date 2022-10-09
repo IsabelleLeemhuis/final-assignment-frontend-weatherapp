@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Header from "../../Components/Header/header-component";
 import './contact.styles.css';
+import Button from "../../Components/Button/button-component";
 
 function Contact () {
     const { handleSubmit, formState: { errors }, register, watch } = useForm();
@@ -91,9 +92,9 @@ function Contact () {
                         Schrijf mij in voor de nieuwsbrief!
                     </label>
 
-                    <button type="submit">
+                    <Button type='submit'>
                         Versturen
-                    </button>
+                    </Button>
 
                 </fieldset>
             </form>

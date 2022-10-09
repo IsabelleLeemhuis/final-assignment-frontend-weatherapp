@@ -38,12 +38,12 @@ function ChooseYourWeather () {
                     <h2>Ga je in de regen dansen of kan het beter droog blijven?</h2>
                     <p>Droog, een buitje of écht regen</p>
                     <label htmlFor="rain-choice">
-                        Kies hier de temperatuur die vandaag het beste bij jou past
+                        Kies hier
 
                         <select id="rain">
-                            <option value="<0">Onder 0 graden</option>
-                            <option value="0-5">0 tot 5 graden</option>
-                            <option value="5-10">5 tot 10 graden</option>
+                            <option value="<0">Droog</option>
+                            <option value="0-5">Af en toe buien</option>
+                            <option value="5-10">Regen</option>
                         </select>
                     </label>
                 </article>

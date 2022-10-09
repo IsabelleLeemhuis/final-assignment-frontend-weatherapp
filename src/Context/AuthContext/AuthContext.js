@@ -15,53 +15,46 @@ function AuthContextProvider({children}) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const token = localStorage.getItem('token');
-        if (token) {
-            async function getUserData () {
-                const decodedToken = jwt_decode(token);
-                try {
-                    const response = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`, {
-                        headers: {
-                            "Content-Type": "application/json",
-                            Authorization: `Bearer ${token}`,
-                        }
-                    });
-                    console.log(response.data);
-                    toggleAuth({
-                        isAuth: true,
-                        user: {
-                            username: response.data.username,
-                            email: response.data.email,
-                            id: response.data.id,
-                        },
-                        status: 'done',
-                    })
-                } catch (e) {
-                    toggleAuth( {
-                        ...auth,
-                        status: 'error',
-                    });
-                    localStorage.clear();
-                    console.error(e);
+            const token = localStorage.getItem('token');
+            if (token) {
+                async function getUserData() {
+                    jwt_decode(token);
+                    try {
+                        const response = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`, {
+                            headers: {
+                                "Content-Type": "application/json",
+                                Authorization: `Bearer ${token}`,
+                            }
+                        });
+                        console.log(response.data);
+                        toggleAuth({
+                            isAuth: true,
+                            user: {
+                                username: response.data.username,
+                                email: response.data.email,
+                                id: response.data.id,
+                            },
+                            status: 'done',
+                        })
+                    } catch (e) {
+                        toggleAuth({
+                            ...auth,
+                            status: 'error',
+                        });
+                        localStorage.clear();
+                        console.error(e);
+                    }
                 }
-            }
-            getUserData();
-        } else {
-            toggleAuth( {
-                ...auth,
-                status: 'done',
-            });
-        }
-    }, []);
 
-    const registration = (username, email, password) => {
-        return axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signup`, {
-            'username': username,
-            'email': email,
-            'password': password,
-            'role': ['user'],
-        })
-    }
+                getUserData();
+            } else {
+                toggleAuth({
+                    ...auth,
+                    status: 'done',
+                });
+            }
+        },
+        []);
 
     function login (token) {
         const decodedToken = jwt_decode(token);

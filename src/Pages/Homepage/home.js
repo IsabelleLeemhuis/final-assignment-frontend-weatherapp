@@ -4,6 +4,7 @@ import axios from "axios";
 import './home.styles.css';
 import Header from "../../Components/Header/header-component";
 
+
 function Home() {
     const [data,setData] = useState({})
     const [location,setLocation] = useState('')
@@ -68,8 +69,8 @@ function Home() {
                 <p>Heb je al een account en ben je ingelogd? Bekijk dan <Link to='/profile'>hier</Link> jouw profielpagina of kies <Link to='/choose-your-weather'>hier</Link> jouw perfecte plek voor vandaag.</p>
 
             </section>
-        </div>
 
+        </div>
     );
 }
 
